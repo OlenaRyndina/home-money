@@ -35,6 +35,18 @@
       "password": "sdfsdfsdfsdf",
       "name": "Alex",
       "id": 6
+    },
+    {
+      "email": "allealena@yandex.ru",
+      "password": "11111111",
+      "name": "Елена Рындина",
+      "id": 7
+    },
+    {
+      "email": "test@mail.ru",
+      "password": "21212121",
+      "name": "Olena",
+      "id": 8
     }
   ],
   "bill": {

@@ -68,6 +68,41 @@
       "name": "Машина",
       "capacity": 6000,
       "id": 3
+    },
+    {
+      "name": "Olena",
+      "capacity": 1,
+      "id": 4
+    },
+    {
+      "name": "Olena",
+      "capacity": 1,
+      "id": 5
+    },
+    {
+      "name": "Olena",
+      "capacity": 1,
+      "id": 6
+    },
+    {
+      "name": "Olena",
+      "capacity": 1,
+      "id": 7
+    },
+    {
+      "name": "Olena",
+      "capacity": 1,
+      "id": 8
+    },
+    {
+      "name": "Olena",
+      "capacity": 1121212,
+      "id": 9
+    },
+    {
+      "name": "Новая2",
+      "capacity": 1344,
+      "id": 10
     }
   ],
   "events": [

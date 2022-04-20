@@ -1,23 +1,28 @@
-<div class="title-block">
-	<h3 class="title">
-		Страница записей<span class="sparkline bar"></span>
+<div class = "title-block">
+	<h3 class = "title">
+		Страница записей<span class = "sparkline bar"></span>
 	</h3>
 </div>
 
-<section class="section text-center"></section>
-<section class="section">
-	<div class="row">
-		<div class="col-md-6">
+<section class = "section text-center" *ngIf = "!isLoaded">
+	Loading...
+</section>
+<section class = "section" *ngIf = "isLoaded">
+	<div class = "row">
+		<div class = "col-md-6">
            <hm-add-event></hm-add-event>
 	    </div>
-	    <div class="col-md-6">
-            <hm-add-category></hm-add-category>
+	    <div class = "col-md-6">
+            <hm-add-category (onCategoryAdd) = "newCategoryAdded($event)"></hm-add-category>
 		</div>
 	</div>
 	<br>
-	<div class="row">
-		<div class="col-md-6">
-			<hm-edit-category></hm-edit-category>
+	<div class = "row">
+		<div class = "col-md-6">
+			<hm-edit-category 
+			[categories] = "categories">
+				(onCategoryEdit) = "categoryWasEdited($event)"
+			</hm-edit-category>
 		</div>
 	</div>
 	<br>

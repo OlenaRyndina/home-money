@@ -50,7 +50,7 @@
     }
   ],
   "bill": {
-    "value": 19600,
+    "value": 122500,
     "currency": "UAH"
   },
   "categories": [
@@ -70,39 +70,19 @@
       "id": 3
     },
     {
-      "name": "Olena",
-      "capacity": 1,
-      "id": 4
-    },
-    {
-      "name": "Olena",
-      "capacity": 1,
-      "id": 5
-    },
-    {
-      "name": "Olena",
-      "capacity": 1,
-      "id": 6
-    },
-    {
-      "name": "Olena",
-      "capacity": 1,
-      "id": 7
-    },
-    {
-      "name": "Olena",
-      "capacity": 1,
-      "id": 8
-    },
-    {
-      "name": "Olena",
-      "capacity": 1121212,
+      "name": "Olena1234",
+      "capacity": 20,
       "id": 9
     },
     {
-      "name": "Новая2",
+      "name": "Новая",
       "capacity": 1344,
       "id": 10
+    },
+    {
+      "name": "Елена Рындина",
+      "capacity": 1,
+      "id": 11
     }
   ],
   "events": [
@@ -169,6 +149,30 @@
       "date": "19.03.2022 18:12:05",
       "description": "sdfsdfsdf",
       "id": 13
+    },
+    {
+      "type": "income",
+      "amount": 1200,
+      "category": 1,
+      "date": "21.04.2022 16:15:11",
+      "description": "test",
+      "id": 14
+    },
+    {
+      "type": "income",
+      "amount": 100000,
+      "category": 1,
+      "date": "21.04.2022 16:41:04",
+      "description": "test",
+      "id": 15
+    },
+    {
+      "type": "income",
+      "amount": 500,
+      "category": 1,
+      "date": "21.04.2022 16:41:33",
+      "description": "petroliom",
+      "id": 16
     }
   ]
 }

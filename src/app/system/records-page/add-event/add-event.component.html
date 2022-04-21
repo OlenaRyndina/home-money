@@ -1,83 +1,109 @@
-<div class="card"> 
-	<div class="card-header bordered">
-		<div class="header-block">
-			<h3 class="title">Добавить событие</h3>
+<div class = "card"> 
+	<div class = "card-header bordered">
+		<div class = "header-block">
+			<h3 class = "title">Добавить событие</h3>
 		</div>
 	</div>
-	<div class="card-body">
+	<div class = "card-body">
 		<div 
-		    class="alert "
+		    class = "alert alert-{{message.type}}"
+		    *ngIf = "message.text"
 		    >
-		   	
+		   	 {{message.text}}
 		</div>
-		<form>
-			<div class="form-group">
+		<form #f = "ngForm" (ngSubmit) = "onSubmit(f)">
+			<div class = "form-group">
 				<label 
-					for="category" 
-					class="control-label">Выберите категорию
+					for = "category" 
+					class = "control-label">Выберите категорию
 				</label>
 				<select 
-					class="form-control" 
-					id="category"
+					class = "form-control" 
+					id = "category"
+					required
+					[ngModel] = "1"
+					name = "category" 
 					>
 					<option 
+					    *ngFor = "let c of categories"
+					    [value] = "c.id"
 					    >
-					    
+					        {{c.name}}
 					</option>
 				</select>
 			</div>
 			<div 
-			    class="form-group">
-				<label class="control-label">Выберите тип</label>
-				<div>
+			    class = "form-group">
+				<label class = "control-label">Выберите тип</label>
+				<div *ngFor = "let t of types">
 					<label>
 					<input 
-						type="radio" 
-						class="radio"
+						type = "radio" 
+						class = "radio"
+						name = "type" 
+						[value] = "t.type"
+						required
+						[ngModel] = "'outcome'" 
 						>						
-					<span></span>
+					<span>{{t.label}}</span>
 					</label>
 				</div>
 			</div>
-			<div class="form-group"
+			<div 
+			    class = "form-group"
+			    [ngClass] = "{'has-error': false}"
 			    >
 				<label 
-					for="amount" 
-					class="control-label">
+					for = "amount" 
+					class = "control-label">
 					Введите сумму    
 				</label>
 				<input 
-					type="number" 
-					id="amount" 
-					class="form-control"
+				    [ngClass] = "{'is-invalid': amount.invalid && amount.touched}"
+					type = "number" 
+					id = "amount" 
+					class = "form-control"
+					name = "amount"
+					[ngModel] = "1"
+					min = "1"
+					#amount = "ngModel"
+					required 
 					>
 				<span 
-				    class="form-help-text"
+				    class = "form-text invalid-feedback"
+				    *ngIf = "amount.invalid && amount.touched"
 				    >
 					Заполните, пожалуйста, это поле.
 				</span>
 			</div>
-			<div class="form-group"
+			<div class = "form-group"
 			    >
 				<label 
-					for="description" 
-					class="control-label">
+					for = "description" 
+					class = "control-label">
 					Введите описание    
 				</label>
 				<input 
-					type="text" 
-					id="description" 
-					class="form-control"
+				    [ngClass] = "{'is-invalid': description.invalid && description.touched}"
+					type = "text" 
+					id = "description" 
+					class = "form-control"
+					name = "description"
+					ngModel
+					#description = "ngModel"
+					required 
 					>
 				<span 
-				    class="form-help-text"
+				    class = "form-text invalid-feedback"
+				    *ngIf = "description.invalid && description.touched"
 				    >
 					Заполните, пожалуйста, это поле.
 				</span>
-			</div>
+			</div><br>
 			<button 
-				type="submit" 
-				class="btn btn-primary"
+				type = "submit" 
+				class = "btn btn-primary"
+				[disabled] = "f.invalid"
 				>
 				Добавить    	
 			</button>

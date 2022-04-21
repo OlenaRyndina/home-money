@@ -21,7 +21,7 @@ export class RecordsPageComponent implements OnInit {
                 this.categories = categories;
                 this.isLoaded = true;
             })
-  }
+  } 
 
     newCategoryAdded(category: Category) {
         this.categories.push(category);

@@ -9,11 +9,12 @@
         </button>
     </div>
 </div>
-<div  class="text-center"></div>
-<div >
-
-
+<div  class="text-center"
+      *ngIf = "!isLoaded">Loading... </div>
+<div *ngIf = "isLoaded">
     <div>
-        
+        <hm-history-chart [data] = "chartData"></hm-history-chart>
+        <hm-history-events></hm-history-events>
+        <hm-history-filter></hm-history-filter>
     </div>
 </div>

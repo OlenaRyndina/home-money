@@ -50,7 +50,7 @@
     }
   ],
   "bill": {
-    "value": 122500,
+    "value": 122400,
     "currency": "UAH"
   },
   "categories": [
@@ -173,6 +173,14 @@
       "date": "21.04.2022 16:41:33",
       "description": "petroliom",
       "id": 16
+    },
+    {
+      "type": "outcome",
+      "amount": 100,
+      "category": 9,
+      "date": "23.04.2022 14:56:28",
+      "description": "test",
+      "id": 17
     }
   ]
 }

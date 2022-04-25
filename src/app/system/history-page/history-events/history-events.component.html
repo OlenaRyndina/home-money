@@ -11,17 +11,19 @@
 							<input 
 							    type = "text" 
 							    class = "form-control"
+							    [placeholder] = "searchPlaceholder"
+							    [(ngModel)] = "searchValue"
 							    >
 						</div>  
-						<div class = "btn-group"> 
+						<div class = "btn-group" hmDropdown> 
 							<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle = "dropdown">
 								Параметр
 							</button>
 							<div class = "dropdown-menu">
-								<a class = "dropdown-item">Сумма</a>
-								<a class = "dropdown-item">Дата</a>
-								<a class = "dropdown-item">Категория</a>
-								<a class = "dropdown-item">Тип</a>
+								<a class = "dropdown-item" (click) = "changeCriteria('amount')">Сумма</a>
+								<a class = "dropdown-item" (click) = "changeCriteria('date')">Дата</a>
+								<a class = "dropdown-item" (click) = "changeCriteria('category')">Категория</a>
+								<a class = "dropdown-item" (click) = "changeCriteria('type')">Тип</a>
 							</div>
 						</div>
 					</div>
@@ -39,20 +41,20 @@
 							</tr>
 						</thead>
 						<tbody>
-						    <tr >
-							    <th ></th>
-							    <td></td>
-							    <td></td>
-							    <td></td>
+						    <tr *ngFor = "let e of events | hmFilter:searchValue:searchField; let idx = index">
+							    <th scope = "row">{{ idx + 1 }}</th>
+							    <td>{{e.amount | number:'1.2'}}</td>
+							    <td>{{e.date | hmMoment:'DD.MM.YYYY HH:mm:ss'}}</td>
+							    <td>{{e.catName}}</td>
 							    <td>
-							    	<span>
-                                        <span>Доход</span>
-                                        <span>Расход</span>
+							    	<span [ngClass] = "getEventClass(e)">
+                                        <span *ngIf = "e.type === 'income'">Доход</span>
+                                        <span *ngIf = "e.type === 'outcome'">Расход</span>
 							    	</span>
 							    </td>
 							    <td class="text-lg-center">
 							    	<a 
-							    	     
+							    	    [routerLink] = "['/system/history', e.id]"
 							    	    class = "btn btn-outline-info">
 							    	    	Открыть
 							    	</a>

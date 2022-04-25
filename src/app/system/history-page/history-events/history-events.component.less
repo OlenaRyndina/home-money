@@ -1,4 +1,4 @@
-div.bordered {
+div.bordered, .form-inline {
 	display: flex;
 	justify-content: space-between;
 }
@@ -10,4 +10,22 @@ td span.btn {
 
 .btn-group {
 	padding-left: 6px;
+
+	.btn-outline-secondary {
+		height: 40px;
+	}
+}
+
+.dropdown-menu {
+	top: 50px;
+}
+
+div.card-header {
+	.open .dropdown-menu{
+        display: block;
+    }
+}
+
+div.form-group {
+	margin-bottom: 10px;
 }

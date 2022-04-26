@@ -24,6 +24,9 @@ export class CategoryService extends BaseApi {
     	return this.put(`categories/${category.id}`, category);
     }
 
+    getCategoryById(id: number): Observable<Category> {
+    	return this.get(`categories/${id}`);
+    }
 }
 
 

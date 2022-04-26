@@ -2,8 +2,7 @@ import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import * as moment from 'moment'; 
 import { mergeMap } from 'rxjs/operators';
-import { Observable } from 'rxjs';
-import { Subscription} from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 
 import { Category } from '../../shared/models/category.model';
 import { HMEvent } from '../../shared/models/event.model';

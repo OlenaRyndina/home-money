@@ -68,21 +68,6 @@
       "name": "Машина",
       "capacity": 6000,
       "id": 3
-    },
-    {
-      "name": "Olena1234",
-      "capacity": 20,
-      "id": 9
-    },
-    {
-      "name": "Новая",
-      "capacity": 1344,
-      "id": 10
-    },
-    {
-      "name": "Елена Рындина",
-      "capacity": 1,
-      "id": 11
     }
   ],
   "events": [
@@ -91,7 +76,7 @@
       "type": "income",
       "amount": 250,
       "category": 2,
-      "date": "12.03.2022 19:41:00",
+      "date": "12.04.2022 19:41:00",
       "description": "Подарили еду в гостях"
     },
     {
@@ -99,7 +84,7 @@
       "type": "outcome",
       "amount": 1300,
       "category": 1,
-      "date": "15.03.2022 11:31:06",
+      "date": "15.04.2022 11:31:06",
       "description": "Покупка посудомоечной машины"
     },
     {
@@ -107,7 +92,7 @@
       "type": "income",
       "amount": 480,
       "category": 2,
-      "date": "21.03.2022 18:28:32",
+      "date": "21.04.2022 18:28:32",
       "description": "Посещение ресторана"
     },
     {
@@ -115,7 +100,7 @@
       "type": "outcome",
       "amount": 1250,
       "category": 2,
-      "date": "22.03.2022 16:21:10",
+      "date": "22.04.2022 16:21:10",
       "description": "Закупка на неделю"
     },
     {
@@ -130,7 +115,7 @@
       "type": "income",
       "amount": 198,
       "category": 1,
-      "date": "01.03.2022 21:38:36",
+      "date": "01.04.2022 21:38:36",
       "description": "test",
       "id": 11
     },
@@ -138,49 +123,9 @@
       "type": "outcome",
       "amount": 250,
       "category": 1,
-      "date": "02.03.2022 16:29:32",
+      "date": "02.04.2022 16:29:32",
       "description": "test",
       "id": 12
-    },
-    {
-      "type": "outcome",
-      "amount": 150,
-      "category": 1,
-      "date": "19.03.2022 18:12:05",
-      "description": "sdfsdfsdf",
-      "id": 13
-    },
-    {
-      "type": "income",
-      "amount": 1200,
-      "category": 1,
-      "date": "21.04.2022 16:15:11",
-      "description": "test",
-      "id": 14
-    },
-    {
-      "type": "income",
-      "amount": 100000,
-      "category": 1,
-      "date": "21.04.2022 16:41:04",
-      "description": "test",
-      "id": 15
-    },
-    {
-      "type": "income",
-      "amount": 500,
-      "category": 1,
-      "date": "21.04.2022 16:41:33",
-      "description": "petroliom",
-      "id": 16
-    },
-    {
-      "type": "outcome",
-      "amount": 100,
-      "category": 9,
-      "date": "23.04.2022 14:56:28",
-      "description": "test",
-      "id": 17
     }
   ]
 }

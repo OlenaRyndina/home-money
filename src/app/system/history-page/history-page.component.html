@@ -4,7 +4,7 @@
 		<span class="sparkline bar"></span>
 	</h3>
     <div class="pull-right">
-        <button class="btn-sm btn btn-outline-info">
+        <button class="btn-sm btn btn-outline-info" (click) = "openFilter()">
             <i class="fa fa-filter"></i>
         </button>
     </div>
@@ -16,8 +16,15 @@
         <hm-history-chart [data] = "chartData"></hm-history-chart>
         <hm-history-events
         [categories] = "categories"
-        [events] = "events">            
+        [events] = "filteredEvents">            
         </hm-history-events>
-        <hm-history-filter></hm-history-filter>
+        <div *ngIf = "isFilterVisible">
+             <hm-history-filter
+                [categories] = "categories"
+                (onFilterApply) = "onFilterApply($event)"
+                (onFilterCancel) = "onFilterCancel()"
+             >                 
+             </hm-history-filter>
+        </div>
     </div>
 </div>

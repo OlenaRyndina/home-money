@@ -9,7 +9,7 @@
 	</div>
 </div>
 <section class = "section">
-	<div class = "text-center" *ngIf = "!isLoaded">Loading...</div>
+	<div class = "text-center" *ngIf = "!isLoaded"><hm-loader></hm-loader></div>
 	<div class = "row" *ngIf = "isLoaded">
 		<div class = "col col-sm-12 col-md-6 col-xl-5">
 			<hm-bill-card [bill] = "bill" [currency] = "currency"> </hm-bill-card>

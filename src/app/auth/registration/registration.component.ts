@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, AsyncValidatorFn } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 import { UsersService } from '../../shared/services/users.service';
 import { User } from '../../shared/models/user.model';
@@ -16,7 +17,11 @@ export class RegistrationComponent implements OnInit {
 
     constructor(
         private usersService: UsersService,
-        private router: Router) { }
+        private router: Router,
+        private title: Title
+        ) {
+            title.setTitle('Регистрация');
+        }
 
     ngOnInit(): void {
         this.form = new FormGroup({
